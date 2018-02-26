@@ -25,22 +25,22 @@ namespace Notes.Controllers
         }
 
         // GET: Users
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var users = (from ur in _context.UserRoles
-                              join r in _context.Roles on ur.RoleId equals r.Id
-                              join u in _context.Users on ur.UserId equals u.Id
-                              select new UserRoleInfo
-                              {
-                                 Id = u.Id,
-                                 Username = u.UserName,
-                                 Role = r.Name
-                              }).ToList();
+                         join r in _context.Roles on ur.RoleId equals r.Id
+                         join u in _context.Users on ur.UserId equals u.Id
+                         select new UserRoleInfo
+                         {
+                             Id = u.Id,
+                             Username = u.UserName,
+                             Role = r.Name
+                         }).ToList();
 
             return View(users);
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             var allRoles = (_context.Roles.OrderBy(r => r.Name).ToList().Select(rr =>
              new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList());
@@ -49,7 +49,7 @@ namespace Notes.Controllers
         }
 
         // GET: Users/Details/5
-        public async Task<IActionResult> Details(string id)
+        public IActionResult Details(string id)
         {
             if (id == null)
             {
@@ -75,7 +75,7 @@ namespace Notes.Controllers
 
 
         // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public IActionResult Edit(string id)
         {
             if (id == null)
             {

@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Notes.Data;
 using Notes.Models;
-using Notes.Services;
+
 
 namespace Notes
 {
@@ -34,7 +34,6 @@ namespace Notes
                 .AddDefaultTokenProviders();
 
             // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
         }
