@@ -1,0 +1,12 @@
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\Notes.csprojResolveAssemblyReference.cache
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\Notes.csproj.CoreCompileInputs.cache
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\Notes.AssemblyInfoInputs.cache
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\Notes.AssemblyInfo.cs
+C:\wamp64\www\Web2\Notes\bin\Debug\netcoreapp2.0\Notes.deps.json
+C:\wamp64\www\Web2\Notes\bin\Debug\netcoreapp2.0\Notes.runtimeconfig.json
+C:\wamp64\www\Web2\Notes\bin\Debug\netcoreapp2.0\Notes.runtimeconfig.dev.json
+C:\wamp64\www\Web2\Notes\bin\Debug\netcoreapp2.0\Notes.dll
+C:\wamp64\www\Web2\Notes\bin\Debug\netcoreapp2.0\Notes.pdb
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\Notes.dll
+C:\wamp64\www\Web2\Notes\obj\Debug\netcoreapp2.0\Notes.pdb
