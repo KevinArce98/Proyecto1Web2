@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Notes.Controllers
 {
-
+    [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
         private readonly ApplicationDbContext _context;

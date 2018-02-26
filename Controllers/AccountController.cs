@@ -46,6 +46,23 @@ namespace Notes.Controllers
         {
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+            
+            if (!_roleManager.RoleExistsAsync("Admin").Result)
+            {
+                await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                await _roleManager.CreateAsync(new IdentityRole("User"));
+                var user = new ApplicationUser()
+                {
+                    UserName = "Admin",
+                 };
+                string pass = "Admin123@";
+                var check = _userManager.CreateAsync(user,pass);
+                if (check.IsCompletedSuccessfully)
+                {
+                    var result1 = _userManager.AddToRoleAsync(user, "Admin");
+                }
+            }
+
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
@@ -213,7 +230,7 @@ namespace Notes.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
