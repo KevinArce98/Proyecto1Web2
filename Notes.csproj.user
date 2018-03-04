@@ -12,5 +12,6 @@
     <WebStackScaffolding_DbContextTypeFullName>Notes.Data.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <WebStackScaffolding_ViewDialogWidth>600.369230769231</WebStackScaffolding_ViewDialogWidth>
   </PropertyGroup>
 </Project>

@@ -8,6 +8,13 @@ namespace Notes.Models
 {
     public class MeetingViewModel
     {
+        public MeetingViewModel()
+        {
+            Title = "";
+            DateAndTime = new DateTime();
+            IsVirtual = false;
+            ListUsers = new List<ApplicationUser>();
+        }
         public string Id { get; set; }
         [StringLength(50, MinimumLength = 3)]
         [Required]

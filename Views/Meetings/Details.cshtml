@@ -30,6 +30,15 @@
             @Html.DisplayFor(model => model.IsVirtual)
         </dd>
         <dt>
+           Users
+        </dt>
+        <dd>
+            @foreach (var item in ViewBag.Users)
+            {
+                <p>@item.UserName</p>
+            }
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Client)
         </dt>
         <dd>
