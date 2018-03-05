@@ -133,14 +133,22 @@ namespace Notes.Controllers
                 return NotFound();
             }
 
-            var applicationUser = await _context.ApplicationUser
-                .SingleOrDefaultAsync(m => m.Id == id);
-            if (applicationUser == null)
+            var user = (from ur in _context.UserRoles
+                        join r in _context.Roles on ur.RoleId equals r.Id
+                        join u in _context.Users on ur.UserId equals u.Id
+                        where u.Id == id
+                        select new RegisterViewModel
+                        {
+                            Id = u.Id,
+                            Username = u.UserName,
+                            Role = r.Name
+                        }).ToList();
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(applicationUser);
+            return View(user);
         }
 
         // POST: Users/Delete/5

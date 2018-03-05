@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2 class="text-center">Details</h2>
 
 <div>
     <h4>ApplicationUser</h4>
@@ -25,6 +25,6 @@
     </form>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model[0].Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model[0].Id" class="btn btn-warning">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
 </div>
